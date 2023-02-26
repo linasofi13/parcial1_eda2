@@ -81,3 +81,4 @@ def tiempoEtapaTratamiento(cantidadMedPred, cantidadPacientes, pacientesLista, t
 
     print(f"Para un prediagnostico con {cantidadMedPred} medicos, {cantidadPacientes} pacientes, {triaje} de triaje, Condicion -> {condicion} , Sobrepeso -> {sobrepeso} , la prediccion es: {resultado}")
     return resultado
+
