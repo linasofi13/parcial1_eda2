@@ -20,13 +20,6 @@ def verLista(lista):
         
 if __name__ == '__main__':
     datos = crearDummis(int(input('Cuantos datos? ')))
-    """verLista(datos)
-    print("="*20)
-    datosOrd = mergeSort(datos)
-    verLista(datosOrd)"""
-    
-    #datos = [4, 9, 1, 78, 7, -8, 5, 4, 78]
-    # datos = ["camisa", "vaca", "carro"]
     verLista(datos)
     print("="*20)
     datosOrd = quickSort(datos)
