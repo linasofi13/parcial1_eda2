@@ -58,6 +58,7 @@ El código está dividido en 8 archivos:
   
 </p>
 </p>
+  <br>
 - Se encuentra otro archivo llamado "ordenamientos.py" el cual puede ser utilizado para ordenar los datos
   <br>
 :pushpin: Realizado por: Lina Ballesteros
