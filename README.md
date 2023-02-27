@@ -56,14 +56,13 @@ El código está dividido en 8 archivos:
 
   - Es el archivo ejecutable, se encuentra el menú para inicializar el programa. Muestra los pacientes con sus respectivos tiempos por cada etapa y el tiempo promedio por etapa de todos los pacientes. Dentro de las opciones se puede seleccionar la cantidad de pacientes a generar y el día a analizar. 
   
-</p>
-</p>
-<br>
-## Output :framed_picture:
-</p>
-</p>
-  <br>
-![image](https://user-images.githubusercontent.com/103126242/221451536-1731a717-b1f8-405b-91e9-21a55534f55f.png)
+## Output :blossom:
+
+
+![image](https://user-images.githubusercontent.com/103126242/221452728-1a3661b4-e9c5-4cd3-b637-a31f4582c8a4.png)
+
+![Captura de pantalla 2023-02-26 203248](https://user-images.githubusercontent.com/103126242/221452689-767f2a2d-5513-4e20-b95f-1214238819a7.png)
+
 
 <br>
 - Se encuentra otro archivo llamado "ordenamientos.py" el cual puede ser utilizado para ordenar los datos
