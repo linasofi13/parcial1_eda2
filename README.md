@@ -58,7 +58,14 @@ El código está dividido en 8 archivos:
   
 </p>
 </p>
+<br>
+## Output :framed_picture:
+</p>
+</p>
   <br>
+![image](https://user-images.githubusercontent.com/103126242/221451536-1731a717-b1f8-405b-91e9-21a55534f55f.png)
+
+<br>
 - Se encuentra otro archivo llamado "ordenamientos.py" el cual puede ser utilizado para ordenar los datos
   <br>
 :pushpin: Realizado por: Lina Ballesteros
