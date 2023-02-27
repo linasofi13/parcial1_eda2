@@ -23,8 +23,8 @@ def menu():
         dia = int(input())
         pacientesLista = crearDummis(cantidadPacientes)
         for paciente in pacientesLista:
-            triaje, condicion, sobrepeso = asignacionPaciente(paciente)
-            reporteDia(dia, "clinica_del_norte", cantidadPacientes, pacientesLista, triaje, condicion, sobrepeso)   
+            triage, condicion, sobrepeso = asignacionPaciente(paciente)
+            reporteDia(dia, "clinica_del_norte", cantidadPacientes, pacientesLista, triage, condicion, sobrepeso)   
         
         print("-"*60)
         print("------------------------ Pacientes ------------------------")
@@ -32,9 +32,6 @@ def menu():
         seg1 = tiempoPromedioPrediagnostico()
         seg2 = tiempoPromedioLab()
         seg3 = tiempoPromedioTratamiento()
-        print(f"El tiempo promedio de {cantidadPacientes} pacientes en el prediagnostico fue de {convertirAFormato(seg1)}")
-        print(f"El tiempo promedio de {cantidadPacientes} pacientes en los examenes de laboratorio fue de {convertirAFormato(seg2)}")
-        print(f"El tiempo promedio de {cantidadPacientes} pacientes en el tratamiento fue de {convertirAFormato(seg3)}")
         
         print("-"*60)
         print("--------------------- El tiempo total por paciente: ------------------")
@@ -42,18 +39,27 @@ def menu():
         for paciente in pacientesLista:
             print(f'({i}) {paciente}')
             t, c, s = asignacionPaciente(paciente)
-            segTotal = tiempoTotalPorPaciente(paciente, t, pacientesLista)
+            t1_1, t2_2, segTotal = tiempoTotalPorPaciente(paciente, t, pacientesLista)
             t1 = (600*tiemposPred[i-1])+600
             t2 = (1200*tiemposLab[i-1])+600
             t3 = (1800*tiemposTratamiento[i-1]+600)
+            print("*"*60)
+            print(f"Tiempo Ingreso: {convertirAFormato(t1_1)}" )
+            print(f"Tiempo Triaje: {convertirAFormato(t2_2)}" )
             print(f"Tiempo Prediagnostico: {convertirAFormato(t1)}" )
             print(f"Tiempo Laboratorio: {convertirAFormato(t2)}" )
-            print(f"Tiempo Laboratorio: {convertirAFormato(t3)}" )
-            print(f"| | Tiempo Total: {convertirAFormato(segTotal)}")
+            print(f"Tiempo Tratamiento: {convertirAFormato(t3)}" )
+            print(f"| **** | Tiempo Total: {convertirAFormato(segTotal)} | **** | ")
+            print("*"*60)
             
             i += 1
-        else:
-            sys.exit()
+        medPred, medLab, MedTrat = calcularMedicosEtapa(cantidadMedicos[dia-1], porcentajesXDia[dia-1])
+        print(f"El tiempo promedio de {cantidadPacientes} pacientes, con {cantidadMedicos[dia-1]} medicos en total, con {medPred} medicos la etapa de prediagnostico, en el dia {dias[dia-1]}, fue de {convertirAFormato(seg1)}")
+        print(f"El tiempo promedio de {cantidadPacientes} pacientes, con {cantidadMedicos[dia-1]} medicos en total, con {medLab} medicos la etapa de laboratorio, en el dia {dias[dia-1]}, fue de {convertirAFormato(seg2)}")
+        print(f"El tiempo promedio de {cantidadPacientes} pacientes, con {cantidadMedicos[dia-1]} medicos en total, con {MedTrat} medicos la etapa de Tratamiento, en el dia {dias[dia-1]}, fue de {convertirAFormato(seg3)}")
+
+    else:
+        sys.exit()
             
 if __name__ == '__main__':
     menu()
