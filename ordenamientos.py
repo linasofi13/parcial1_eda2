@@ -1,5 +1,4 @@
 # algoritmo merge sort 
-# # # archivo opcional
 def mergeSort(datos):
     if len(datos) <= 1:
         return datos
@@ -25,6 +24,8 @@ def merge(datosA, datosB):
     resultado += datosA[p1:] + datosB[p2:]
     return resultado
 
+# quick sort
+
 def quickSort(datos):
     if len(datos)<=1:
         return datos
@@ -34,6 +35,8 @@ def quickSort(datos):
     datosIguales=[item for item in datos if item == pivote]
     datosMayores=[item for item in datos if item >pivote]
     return quickSort(datosMenores)+datosIguales+quickSort(datosMayores)
+
+# bubble sort
 
 def bubbleSort(datos):
     n = len(datos)
@@ -49,7 +52,3 @@ def bubbleSort(datos):
             break
 
     return datos
-
-
-
-
