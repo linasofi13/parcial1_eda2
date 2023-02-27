@@ -61,3 +61,4 @@ def tiempoTotalPorPaciente(paciente, triage, listaPacientes):
     
     tiempoTotal = tiempoIngresoATriage + tiempoTriageAPrediagnostico + segundosPred + segundosLab + segundosTratamiento
     return tiempoIngresoATriage, tiempoTriageAPrediagnostico, tiempoTotal
+
