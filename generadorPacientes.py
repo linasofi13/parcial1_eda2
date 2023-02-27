@@ -17,6 +17,8 @@ class Paciente(): # creamos Pacientes con diferentes atributos
     def __str__(self): # sobreescribimos el método
         return f'Paciente: [{self.nombre} | {self.genero} | {self.edad} anios  | {self.estatura:.2f} m | {self.peso:.2f} kg | Enfermedad o Motivo de Consulta: {self.enfermedad} | Condicion Prioritaria: {self.condicionPrioritaria}]'
     
+    # metodos de comparacion para utilizar el ordenamiento de los datos
+    
     def __gt__(self, otroObj): # great than, mayor que -> el operador que nos compara entre los objetos
         return self.edad > otroObj.edad # boolean
     
@@ -26,7 +28,7 @@ class Paciente(): # creamos Pacientes con diferentes atributos
     def __eq__(self, otroObj): #  iguales
         return self.edad == otroObj.edad
     
-def darGenero(self):
+def darGenero(self): # para asignarle a una mujer un embarazo
     nombreReverse = str(self.nombre[::-1])
     k = " "
     n = 2
@@ -77,11 +79,10 @@ def darTiempo2(limiteInf, limiteSup):
 
 def darTiempo3(limiteInf, limiteSup):
     return random.uniform(limiteInf, limiteSup)   
-# elegimos nombres aleatorios
 
 
 def darEnfermedad(self):
-    enfermedad = random.choice(ListaEnfermedades)
+    enfermedad = random.choice(listaEnfermedades)
     return f'{enfermedad}'
 
 def crearDatos(cantidad):
@@ -95,8 +96,9 @@ def crearDatos(cantidad):
         return None
 
 #main
+
 if __name__ == '__main__':
-  # ignore
+
     obj1 = Paciente()
     obj2 = Paciente()
     if obj1 > obj2:
