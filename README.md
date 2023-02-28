@@ -63,7 +63,7 @@ El código está dividido en 8 archivos:
 
 ![Captura de pantalla 2023-02-26 203248](https://user-images.githubusercontent.com/103126242/221452689-767f2a2d-5513-4e20-b95f-1214238819a7.png)
 
-
+![image2](image.png)
 <br>
 - Se encuentra otro archivo llamado "ordenamientos.py" el cual puede ser utilizado para ordenar los datos
   <br>
