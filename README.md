@@ -30,7 +30,7 @@ El código está dividido en 8 archivos:
 
   - Creamos los pacientes de acuerdo a la cantidad indicada por el usuario
   
-* [triajeClasificacion.py](triajeClasificacion.py) 	:computer:
+* [triageClasificacion.py](triageClasificacion.py) 	:computer:
 
   - En este archivo se implementa la red neuronal. Para ello se añaden 2 capas al modelo secuencial y se busca obtener valores entre 0 y 1 con 'sigmoid'
   - La red neuronal calculará los tiempos estimados para cada paciente en las etapas de Prediagóstico, Laboratorio y Tratamiento
