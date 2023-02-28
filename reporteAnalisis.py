@@ -1,5 +1,7 @@
 from triageClasificacion import *
 import random
+import matplotlib.pyplot as plt
+import numpy as np
 
 def convertirAFormato(segundos):
     segundos = segundos % (24 * 3600) #tiempo total en segundos
@@ -62,3 +64,28 @@ def tiempoTotalPorPaciente(paciente, triage, listaPacientes):
     tiempoTotal = tiempoIngresoATriage + tiempoTriageAPrediagnostico + segundosPred + segundosLab + segundosTratamiento
     return tiempoIngresoATriage, tiempoTriageAPrediagnostico, tiempoTotal
 
+def minutos(segundos):
+    minutos = segundos/60
+    return minutos
+
+def graficar(registro):
+    fig = plt.figure(figsize = (10, 5))
+    metodos = []
+    tiempos = []
+    cantidadDatos = registro[0][1]
+    
+    for i in range(3):
+        metodos.append(registro[i][0])
+        tiempos.append(registro[i][1])
+        
+    
+    plt.bar(metodos, tiempos, color ='green',
+        width = 0.4)
+    
+    plt.xlabel("Etapas de Prediccion")
+    plt.ylabel("Tiempo requerrido (s)")
+    plt.title(f"Tiempo promedio por cada etapa")
+    plt.show()
+    
+    
+   
