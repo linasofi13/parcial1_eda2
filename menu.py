@@ -3,7 +3,7 @@ from reporteAnalisis import *
 import sys
 
 def menu():
-    print("Modelo de Gestión de Tiempo y Calidad del Servicio de 2 Centros de Urgencia de la ciudad de Bello")
+    print("Modelo de Prediccion de 1 Centro de Urgencia de la ciudad de Bello")
     print("Seleccione una opción para continuar:")
     print("1 | Consultar Centro de Urgencia Clinica del Norte")
     print("2 | Salir ")
@@ -57,9 +57,15 @@ def menu():
         print(f"El tiempo promedio de {cantidadPacientes} pacientes, con {cantidadMedicos[dia-1]} medicos en total, con {medPred} medicos la etapa de prediagnostico, en el dia {dias[dia-1]}, fue de {convertirAFormato(seg1)}")
         print(f"El tiempo promedio de {cantidadPacientes} pacientes, con {cantidadMedicos[dia-1]} medicos en total, con {medLab} medicos la etapa de laboratorio, en el dia {dias[dia-1]}, fue de {convertirAFormato(seg2)}")
         print(f"El tiempo promedio de {cantidadPacientes} pacientes, con {cantidadMedicos[dia-1]} medicos en total, con {MedTrat} medicos la etapa de Tratamiento, en el dia {dias[dia-1]}, fue de {convertirAFormato(seg3)}")
-
+        
+        registro = []
+        registro.append(('Prediagnostico', minutos(seg1))) # registro[i] = [(metodo, nDatos, tiempo), --]
+        registro.append(('Laboratorio', minutos(seg2)))
+        registro.append(('Tratamiento', minutos(seg3)))
+        graficar(registro)
+        # print(registro)
     else:
-        sys.exit()
+        sys.exit() # [(n, n), (n, n), (n, n)] arreglo[0][0] arreglo [1][0]
             
 if __name__ == '__main__':
     menu()
